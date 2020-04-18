@@ -10,8 +10,7 @@
     "test": "ng test --watch=false",
     "test:dev": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "doc": "npx compodoc -p ./tsconfig.app.json -d ./src/docs"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
