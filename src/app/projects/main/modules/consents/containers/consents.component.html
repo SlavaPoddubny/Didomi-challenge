@@ -1,0 +1,80 @@
+<!-- Toolbar -->
+<app-toolbar title="Collected Consents"></app-toolbar>
+
+<div class="container">
+  <div class="mat-elevation-z3">
+    <!-- Empty Data -->
+    <div class="consentsTable-empty"
+         fxLayout="column"
+         fxLayoutAlign="center center"
+         *ngIf="!(consentsTotalCount$ | async) || (isConsentsLoading$ | async)">
+      <ng-container *ngIf="!(isConsentsLoading$ | async)">
+        <span>No Consents</span>
+      </ng-container>
+      <ng-container *ngIf="isConsentsLoading$ | async">
+        <span>Loading...</span>  
+      </ng-container>
+    </div>
+
+    <!-- Table with loaded data -->
+    <table mat-table 
+           class="consentsTable"
+           [dataSource]="dataSource"
+           *ngIf="(consentsTotalCount$ | async) && !(isConsentsLoading$ | async)">
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef width="25%">Name</th>
+        <td mat-cell *matCellDef="let element">{{element.name}}</td>
+      </ng-container>
+    
+
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef width="25%">Email</th>
+        <td mat-cell *matCellDef="let element">{{element.email}}</td>
+      </ng-container>
+    
+
+      <ng-container matColumnDef="consentsGivenFor">
+        <th mat-header-cell *matHeaderCellDef width="calc(50% - 30px)">Consent given for</th>
+        <td mat-cell *matCellDef="let element">{{ element.consentsGivenFor }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef width="30px"></th>
+        <td mat-cell *matCellDef="let element">
+          <mat-icon aria-hidden="false"
+                    aria-label="Remove"
+                    (click)="removeConsent(element.id)">delete</mat-icon>
+        </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <!-- Paginator -->
+    <div class="mat-paginator-container"
+         [ngClass]="{'consentsPagination--hidden': !(consentsTotalCount$ | async) || (isConsentsLoading$ | async)}"
+         fxLayout="row"
+         fxLayoutAlign="spase-between center"
+         fxLayoutGap="20px">
+      <mat-paginator #paginator
+                     [length]="consentsTotalCount$ | async"
+                     [pageSize]="pageSize"
+                     [showFirstLastButtons]="true"
+                     [hidePageSize]="true"
+                     (page)="onPageChange($event)">
+      </mat-paginator>
+      <div fxLayout="row"
+           fxLayoutAlign="start center"
+           fxLayoutGap="10px">
+        <span>Pages: </span>
+        <mat-button class="consentsPagination-page"
+                    [ngClass]="{'consentsPagination-page--active': page === paginator.pageIndex}"
+                    *ngFor="let page of pages"
+                    (click)="goToPage(page)">
+          {{ page + 1 }}
+        </mat-button>
+      </div>
+    </div>
+  </div>
+</div>

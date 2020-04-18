@@ -1,0 +1,1432 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>didomi-challenge documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">didomi-challenge documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>ConsentsComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/projects/main/modules/consents/containers/consents.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Extends</h3>
+    </p>
+    <p class="comment">
+                <code><a href="../classes/Unsubscriber.html" target="_self" >Unsubscriber</a></code>
+    </p>
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-consents</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./consents.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./consents.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#consents$">consents$</a>
+                            </li>
+                            <li>
+                                <a href="#consentsTotalCount$">consentsTotalCount$</a>
+                            </li>
+                            <li>
+                                <a href="#dataSource">dataSource</a>
+                            </li>
+                            <li>
+                                <a href="#displayedColumns">displayedColumns</a>
+                            </li>
+                            <li>
+                                <a href="#isConsentsLoading$">isConsentsLoading$</a>
+                            </li>
+                            <li>
+                                <a href="#pageSize">pageSize</a>
+                            </li>
+                            <li>
+                                <a href="#paginator">paginator</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#destroy$">destroy$</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#goToPage">goToPage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#initializeData">initializeData</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#loadConsents">loadConsents</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onPageChange">onPageChange</a>
+                            </li>
+                            <li>
+                                <a href="#removeConsent">removeConsent</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#unsubscribeAll">unsubscribeAll</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#pages">pages</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(consentsStore: <a href="../interfaces/ConsentsModuleStore.html">Store<fromConsentsStore.ConsentsModuleStore></a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/projects/main/modules/consents/containers/consents.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>consentsStore</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../interfaces/ConsentsModuleStore.html" target="_self" >Store&lt;fromConsentsStore.ConsentsModuleStore&gt;</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="goToPage"></a>
+                    <span class="name">
+                        <b>
+                            goToPage
+                        </b>
+                        <a href="#goToPage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>goToPage(pageIndex: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="70"
+                            class="link-to-prism">src/app/projects/main/modules/consents/containers/consents.component.ts:70</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Change page of a table using page numbers</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>pageIndex</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>page index</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initializeData"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            initializeData
+                        </b>
+                        <a href="#initializeData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>initializeData(data: <a href="../classes/Consent.html">Consent[]</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="97"
+                            class="link-to-prism">src/app/projects/main/modules/consents/containers/consents.component.ts:97</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Put loaded data to Mat Table</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                                <code><a href="../classes/Consent.html" target="_self" >Consent[]</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>list of items</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadConsents"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            loadConsents
+                        </b>
+                        <a href="#loadConsents"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>loadConsents(pageIndex: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="89"
+                            class="link-to-prism">src/app/projects/main/modules/consents/containers/consents.component.ts:89</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Load main data based on page index and page size</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>pageIndex</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>1</code>
+                                    </td>
+
+                                    <td>
+                                        <p>page index</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="44"
+                            class="link-to-prism">src/app/projects/main/modules/consents/containers/consents.component.ts:44</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onPageChange"></a>
+                    <span class="name">
+                        <b>
+                            onPageChange
+                        </b>
+                        <a href="#onPageChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onPageChange(event: PageEvent)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="61"
+                            class="link-to-prism">src/app/projects/main/modules/consents/containers/consents.component.ts:61</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Change page of a table using arrows</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                            <code>PageEvent</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Mat Paginator entity with data about page</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeConsent"></a>
+                    <span class="name">
+                        <b>
+                            removeConsent
+                        </b>
+                        <a href="#removeConsent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>removeConsent(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="81"
+                            class="link-to-prism">src/app/projects/main/modules/consents/containers/consents.component.ts:81</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Remove item from list</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>unique item id</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <b>
+                            ngOnDestroy
+                        </b>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Inherited from         <code><a href="../classes/Unsubscriber.html" target="_self" >Unsubscriber</a></code>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-line">Defined in         <code><a href="../classes/Unsubscriber.html#source" target="_self" >Unsubscriber:9</a></code>
+</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="unsubscribeAll"></a>
+                    <span class="name">
+                        <b>
+                            unsubscribeAll
+                        </b>
+                        <a href="#unsubscribeAll"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>unsubscribeAll()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Inherited from         <code><a href="../classes/Unsubscriber.html" target="_self" >Unsubscriber</a></code>
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-line">Defined in         <code><a href="../classes/Unsubscriber.html#source" target="_self" >Unsubscriber:13</a></code>
+</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="consents$"></a>
+                        <span class="name">
+                            <b>
+                            consents$</b>
+                            <a href="#consents$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>this.consentsStore.pipe&lt;Consent[]&gt;(select(fromConsentsStore.getConsents))</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/projects/main/modules/consents/containers/consents.component.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="consentsTotalCount$"></a>
+                        <span class="name">
+                            <b>
+                            consentsTotalCount$</b>
+                            <a href="#consentsTotalCount$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>this.consentsStore.pipe&lt;number&gt;(select(fromConsentsStore.getConsentsTotalCount))</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/projects/main/modules/consents/containers/consents.component.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dataSource"></a>
+                        <span class="name">
+                            <b>
+                            dataSource</b>
+                            <a href="#dataSource"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Consent.html" target="_self" >MatTableDataSource&lt;Consent&gt;</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/projects/main/modules/consents/containers/consents.component.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="displayedColumns"></a>
+                        <span class="name">
+                            <b>
+                            displayedColumns</b>
+                            <a href="#displayedColumns"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>string[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[&#x27;name&#x27;, &#x27;email&#x27;, &#x27;consentsGivenFor&#x27;, &#x27;action&#x27;]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/projects/main/modules/consents/containers/consents.component.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isConsentsLoading$"></a>
+                        <span class="name">
+                            <b>
+                            isConsentsLoading$</b>
+                            <a href="#isConsentsLoading$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>this.consentsStore.pipe&lt;boolean&gt;(select(fromConsentsStore.getIsConsentsLoading))</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/projects/main/modules/consents/containers/consents.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pageSize"></a>
+                        <span class="name">
+                            <b>
+                            pageSize</b>
+                            <a href="#pageSize"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>2</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/projects/main/modules/consents/containers/consents.component.ts:29</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="paginator"></a>
+                        <span class="name">
+                            <b>
+                            paginator</b>
+                            <a href="#paginator"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>MatPaginator</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(MatPaginator)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/projects/main/modules/consents/containers/consents.component.ts:31</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="destroy$"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            destroy$</b>
+                            <a href="#destroy$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subject&lt;void&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Subject&lt;void&gt;()</code>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Inherited from         <code><a href="../classes/Unsubscriber.html" target="_self" >Unsubscriber</a></code>
+</div>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in         <code><a href="../classes/Unsubscriber.html#source" target="_self" >Unsubscriber:7</a></code>
+</div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pages"></a>
+                        <span class="name"><b>pages</b><a href="#pages"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>pages()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/projects/main/modules/consents/containers/consents.component.ts:36</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Get list of available pages based on data length</p>
+</div>
+
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, ViewChild, OnInit } from &#x27;@angular/core&#x27;;
+import { MatTableDataSource } from &#x27;@angular/material/table&#x27;;
+import { MatPaginator, PageEvent } from &#x27;@angular/material/paginator&#x27;;
+
+import { Store, select } from &#x27;@ngrx/store&#x27;;
+import { takeUntil } from &#x27;rxjs/operators&#x27;;
+import { range } from &#x27;lodash-es&#x27;;
+
+import { Unsubscriber } from &#x27;@core/classes/unsubscriber&#x27;;
+
+// models
+import { Consent } from &#x27;@share/models/consent.model&#x27;;
+
+// store
+import * as fromConsentsStore from &#x27;@core/store&#x27;;
+
+@Component({
+  selector: &#x27;app-consents&#x27;,
+  templateUrl: &#x27;./consents.component.html&#x27;,
+  styleUrls: [&#x27;./consents.component.scss&#x27;],
+})
+export class ConsentsComponent extends Unsubscriber implements OnInit {
+  consents$ &#x3D; this.consentsStore.pipe&lt;Consent[]&gt;(select(fromConsentsStore.getConsents));
+  consentsTotalCount$ &#x3D; this.consentsStore.pipe&lt;number&gt;(select(fromConsentsStore.getConsentsTotalCount));
+  isConsentsLoading$ &#x3D; this.consentsStore.pipe&lt;boolean&gt;(select(fromConsentsStore.getIsConsentsLoading));
+
+  displayedColumns: string[] &#x3D; [&#x27;name&#x27;, &#x27;email&#x27;, &#x27;consentsGivenFor&#x27;, &#x27;action&#x27;];
+  dataSource: MatTableDataSource&lt;Consent&gt;;
+  pageSize &#x3D; 2;
+
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
+  /**
+   * Get list of available pages based on data length
+   */
+  get pages() {
+    return this.paginator ? range(this.paginator.getNumberOfPages()) : [];
+  }
+
+  constructor(private consentsStore: Store&lt;fromConsentsStore.ConsentsModuleStore&gt;) {
+    super();
+  }
+
+  ngOnInit() {
+    this.loadConsents();
+
+    /**
+     * Subscription for data initializing right after data appeared in store
+     */
+    this.consents$
+      .pipe(takeUntil(this.destroy$))
+      .subscribe((data: Consent[]) &#x3D;&gt; {
+        this.initializeData(data);
+      });
+  }
+
+  /**
+   * Change page of a table using arrows
+   * @param event Mat Paginator entity with data about page
+   */
+  onPageChange(event: PageEvent): void {
+    this.paginator.pageIndex &#x3D; event.pageIndex;
+    this.loadConsents(event.pageIndex + 1);
+  }
+
+  /**
+   * Change page of a table using page numbers
+   * @param pageIndex page index
+   */
+  goToPage(pageIndex: number): void {
+    if (this.paginator &amp;&amp; this.paginator.pageIndex !&#x3D;&#x3D; pageIndex) {
+      this.paginator.pageIndex &#x3D; pageIndex;
+      this.loadConsents(pageIndex + 1);
+    }
+  }
+
+  /**
+   * Remove item from list
+   * @param id unique item id
+   */
+  removeConsent(id: number): void {
+    this.consentsStore.dispatch(new fromConsentsStore.RemoveConsent({ id, pageSize: this.pageSize }));
+  }
+
+  /**
+   * Load main data based on page index and page size
+   * @param pageIndex page index
+   */
+  private loadConsents(pageIndex &#x3D; 1): void {
+    this.consentsStore.dispatch(new fromConsentsStore.LoadConsents({ pageIndex, pageSize: this.pageSize }));
+  }
+
+  /**
+   * Put loaded data to Mat Table
+   * @param data list of items
+   */
+  private initializeData(data: Consent[]): void {
+    this.dataSource &#x3D; new MatTableDataSource(data);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;!-- Toolbar --&gt;
+&lt;app-toolbar title&#x3D;&quot;Collected Consents&quot;&gt;&lt;/app-toolbar&gt;
+
+&lt;div class&#x3D;&quot;container&quot;&gt;
+  &lt;div class&#x3D;&quot;mat-elevation-z3&quot;&gt;
+    &lt;!-- Empty Data --&gt;
+    &lt;div class&#x3D;&quot;consentsTable-empty&quot;
+         fxLayout&#x3D;&quot;column&quot;
+         fxLayoutAlign&#x3D;&quot;center center&quot;
+         *ngIf&#x3D;&quot;!(consentsTotalCount$ | async) || (isConsentsLoading$ | async)&quot;&gt;
+      &lt;ng-container *ngIf&#x3D;&quot;!(isConsentsLoading$ | async)&quot;&gt;
+        &lt;span&gt;No Consents&lt;/span&gt;
+      &lt;/ng-container&gt;
+      &lt;ng-container *ngIf&#x3D;&quot;isConsentsLoading$ | async&quot;&gt;
+        &lt;span&gt;Loading...&lt;/span&gt;  
+      &lt;/ng-container&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Table with loaded data --&gt;
+    &lt;table mat-table 
+           class&#x3D;&quot;consentsTable&quot;
+           [dataSource]&#x3D;&quot;dataSource&quot;
+           *ngIf&#x3D;&quot;(consentsTotalCount$ | async) &amp;&amp; !(isConsentsLoading$ | async)&quot;&gt;
+      &lt;ng-container matColumnDef&#x3D;&quot;name&quot;&gt;
+        &lt;th mat-header-cell *matHeaderCellDef width&#x3D;&quot;25%&quot;&gt;Name&lt;/th&gt;
+        &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt;{{element.name}}&lt;/td&gt;
+      &lt;/ng-container&gt;
+    
+
+      &lt;ng-container matColumnDef&#x3D;&quot;email&quot;&gt;
+        &lt;th mat-header-cell *matHeaderCellDef width&#x3D;&quot;25%&quot;&gt;Email&lt;/th&gt;
+        &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt;{{element.email}}&lt;/td&gt;
+      &lt;/ng-container&gt;
+    
+
+      &lt;ng-container matColumnDef&#x3D;&quot;consentsGivenFor&quot;&gt;
+        &lt;th mat-header-cell *matHeaderCellDef width&#x3D;&quot;calc(50% - 30px)&quot;&gt;Consent given for&lt;/th&gt;
+        &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt;{{ element.consentsGivenFor }}&lt;/td&gt;
+      &lt;/ng-container&gt;
+
+      &lt;ng-container matColumnDef&#x3D;&quot;action&quot;&gt;
+        &lt;th mat-header-cell *matHeaderCellDef width&#x3D;&quot;30px&quot;&gt;&lt;/th&gt;
+        &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt;
+          &lt;mat-icon aria-hidden&#x3D;&quot;false&quot;
+                    aria-label&#x3D;&quot;Remove&quot;
+                    (click)&#x3D;&quot;removeConsent(element.id)&quot;&gt;delete&lt;/mat-icon&gt;
+        &lt;/td&gt;
+      &lt;/ng-container&gt;
+    
+      &lt;tr mat-header-row *matHeaderRowDef&#x3D;&quot;displayedColumns&quot;&gt;&lt;/tr&gt;
+      &lt;tr mat-row *matRowDef&#x3D;&quot;let row; columns: displayedColumns;&quot;&gt;&lt;/tr&gt;
+    &lt;/table&gt;
+
+    &lt;!-- Paginator --&gt;
+    &lt;div class&#x3D;&quot;mat-paginator-container&quot;
+         [ngClass]&#x3D;&quot;{&#x27;consentsPagination--hidden&#x27;: !(consentsTotalCount$ | async) || (isConsentsLoading$ | async)}&quot;
+         fxLayout&#x3D;&quot;row&quot;
+         fxLayoutAlign&#x3D;&quot;spase-between center&quot;
+         fxLayoutGap&#x3D;&quot;20px&quot;&gt;
+      &lt;mat-paginator #paginator
+                     [length]&#x3D;&quot;consentsTotalCount$ | async&quot;
+                     [pageSize]&#x3D;&quot;pageSize&quot;
+                     [showFirstLastButtons]&#x3D;&quot;true&quot;
+                     [hidePageSize]&#x3D;&quot;true&quot;
+                     (page)&#x3D;&quot;onPageChange($event)&quot;&gt;
+      &lt;/mat-paginator&gt;
+      &lt;div fxLayout&#x3D;&quot;row&quot;
+           fxLayoutAlign&#x3D;&quot;start center&quot;
+           fxLayoutGap&#x3D;&quot;10px&quot;&gt;
+        &lt;span&gt;Pages: &lt;/span&gt;
+        &lt;mat-button class&#x3D;&quot;consentsPagination-page&quot;
+                    [ngClass]&#x3D;&quot;{&#x27;consentsPagination-page--active&#x27;: page &#x3D;&#x3D;&#x3D; paginator.pageIndex}&quot;
+                    *ngFor&#x3D;&quot;let page of pages&quot;
+                    (click)&#x3D;&quot;goToPage(page)&quot;&gt;
+          {{ page + 1 }}
+        &lt;/mat-button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./consents.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;src/assets/styles/variables.scss&quot;;
+
+.consentsTable {
+  width: 100%;
+
+  .mat-icon {
+    cursor: pointer;
+    color: $color-blue;
+  }
+
+  &amp;-empty {
+    height: 208px;
+    background-color: $color-white;
+    border-bottom: 1px solid $color-light-gray;
+  }
+}
+
+.consentsPagination--hidden {
+  display: none !important;
+}
+.consentsPagination-page {
+  cursor: pointer;
+  color: rgba($color-blue, .7);
+
+  &amp;--active {
+    cursor: default;
+    color: $color-blue;
+    font-weight: 700;
+  }
+}
+
+// table overrides
+:host ::ng-deep {
+  .mat-header-cell,
+  .mat-paginator-range-label {
+    color: $color-blue;
+  }
+
+  .mat-cell {
+    padding: 0 5px;
+  }
+
+  .mat-paginator-container {
+    background-color: $color-white;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><!-- Toolbar --><app-toolbar title="Collected Consents"></app-toolbar><div class="container">  <div class="mat-elevation-z3">    <!-- Empty Data -->    <div class="consentsTable-empty"         fxLayout="column"         fxLayoutAlign="center center"         *ngIf="!(consentsTotalCount$ | async) || (isConsentsLoading$ | async)">      <ng-container *ngIf="!(isConsentsLoading$ | async)">        <span>No Consents</span>      </ng-container>      <ng-container *ngIf="isConsentsLoading$ | async">        <span>Loading...</span>        </ng-container>    </div>    <!-- Table with loaded data -->    <table mat-table            class="consentsTable"           [dataSource]="dataSource"           *ngIf="(consentsTotalCount$ | async) && !(isConsentsLoading$ | async)">      <ng-container matColumnDef="name">        <th mat-header-cell *matHeaderCellDef width="25%">Name</th>        <td mat-cell *matCellDef="let element">{{element.name}}</td>      </ng-container>          <ng-container matColumnDef="email">        <th mat-header-cell *matHeaderCellDef width="25%">Email</th>        <td mat-cell *matCellDef="let element">{{element.email}}</td>      </ng-container>          <ng-container matColumnDef="consentsGivenFor">        <th mat-header-cell *matHeaderCellDef width="calc(50% - 30px)">Consent given for</th>        <td mat-cell *matCellDef="let element">{{ element.consentsGivenFor }}</td>      </ng-container>      <ng-container matColumnDef="action">        <th mat-header-cell *matHeaderCellDef width="30px"></th>        <td mat-cell *matCellDef="let element">          <mat-icon aria-hidden="false"                    aria-label="Remove"                    (click)="removeConsent(element.id)">delete</mat-icon>        </td>      </ng-container>          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>    </table>    <!-- Paginator -->    <div class="mat-paginator-container"         [ngClass]="{\'consentsPagination--hidden\': !(consentsTotalCount$ | async) || (isConsentsLoading$ | async)}"         fxLayout="row"         fxLayoutAlign="spase-between center"         fxLayoutGap="20px">      <mat-paginator #paginator                     [length]="consentsTotalCount$ | async"                     [pageSize]="pageSize"                     [showFirstLastButtons]="true"                     [hidePageSize]="true"                     (page)="onPageChange($event)">      </mat-paginator>      <div fxLayout="row"           fxLayoutAlign="start center"           fxLayoutGap="10px">        <span>Pages: </span>        <mat-button class="consentsPagination-page"                    [ngClass]="{\'consentsPagination-page--active\': page === paginator.pageIndex}"                    *ngFor="let page of pages"                    (click)="goToPage(page)">          {{ page + 1 }}        </mat-button>      </div>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ConsentsComponent', 'selector': 'app-consents'},{'name': 'GiveConsentComponent', 'selector': 'app-give-consent'},{'name': 'MainComponent', 'selector': 'app-main'},{'name': 'SpinnerComponent', 'selector': 'app-spinner'},{'name': 'ToolbarComponent', 'selector': 'app-toolbar'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'ConsentsComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ConsentsComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

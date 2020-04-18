@@ -16,8 +16,16 @@ module.exports = function (config) {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
     coverageIstanbulReporter: {
-      dir: require('path').join(__dirname, './coverage/didomi-challenge'),
-      reports: ['html', 'lcovonly', 'text-summary'],
+      dir: require('path').join(__dirname, './coverage/UI'),
+      exclude: [
+        "node_modules",
+        "**/*.model.ts",
+        "**/*.module.ts",
+        "**/*.mock.ts",
+        "**/index.ts",
+        "**/modules.ts"
+      ],
+      reports: ['html', 'lcov', 'cobertura'],
       fixWebpackSourcePaths: true
     },
     reporters: ['progress', 'kjhtml'],
@@ -25,8 +33,13 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
-    singleRun: false,
-    restartOnFileChange: true
+    browserNoActivityTimeout: 120000,
+    browserDisconnectTimeout: 120000,
+    browserDisconnectTolerance: 5,
+    retryLimit: 5,
+    browserSocketTimeout: 60000,
+    captureTimeout: 120000,
+    browsers: ['ChromeHeadless'],
+    singleRun: false
   });
 };

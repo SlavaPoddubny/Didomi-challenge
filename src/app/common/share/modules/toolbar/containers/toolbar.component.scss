@@ -1,0 +1,19 @@
+@import "src/assets/styles/variables.scss";
+
+.toolbar {
+  background-color: $color-white;
+  height: 60px;
+  padding: 10px 30px;
+  border-bottom: 1px solid $color-light-gray;
+
+  &-heading {
+    color: $color-black;
+    font-weight: 600;
+    font-size: 22px;
+  }
+
+  a {
+    font-size: 10px;;
+    color: $color-blue;
+  }
+}

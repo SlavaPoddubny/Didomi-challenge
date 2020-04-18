@@ -1,0 +1,46 @@
+@import "src/assets/styles/variables.scss";
+
+.consentsTable {
+  width: 100%;
+
+  .mat-icon {
+    cursor: pointer;
+    color: $color-blue;
+  }
+
+  &-empty {
+    height: 208px;
+    background-color: $color-white;
+    border-bottom: 1px solid $color-light-gray;
+  }
+}
+
+.consentsPagination--hidden {
+  display: none !important;
+}
+.consentsPagination-page {
+  cursor: pointer;
+  color: rgba($color-blue, .7);
+
+  &--active {
+    cursor: default;
+    color: $color-blue;
+    font-weight: 700;
+  }
+}
+
+// table overrides
+:host ::ng-deep {
+  .mat-header-cell,
+  .mat-paginator-range-label {
+    color: $color-blue;
+  }
+
+  .mat-cell {
+    padding: 0 5px;
+  }
+
+  .mat-paginator-container {
+    background-color: $color-white;
+  }
+}

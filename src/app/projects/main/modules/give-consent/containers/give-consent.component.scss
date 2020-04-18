@@ -1,0 +1,15 @@
+@import "src/assets/styles/variables.scss";
+
+.giveConsentForm {
+  width: 50%;
+  padding: 20px;
+
+  .mat-raised-button {
+    color: $color-white;
+    background-color: $color-blue;
+
+    &[disabled] {
+      opacity: .3;
+    }
+  }
+}

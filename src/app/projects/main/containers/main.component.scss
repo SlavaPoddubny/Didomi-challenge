@@ -1,0 +1,21 @@
+@import "src/assets/styles/variables.scss";
+
+.sidenav-container {
+   height: 100%;
+ }
+
+ .sidenav-heading {
+   padding: 16px;
+   color: $color-blue;
+ }
+
+ .sidebar-link {
+  font-size: 16px;
+  text-decoration: none;
+  color: $color-black;
+
+  &--active {
+    font-weight: 700;
+    color: $color-blue;
+  }
+ }

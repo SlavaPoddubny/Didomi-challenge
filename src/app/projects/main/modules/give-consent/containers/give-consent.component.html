@@ -1,0 +1,49 @@
+<app-toolbar title="Give Consent"></app-toolbar>
+
+<div class="container"
+     fxLayout="column"
+     fxLayoutAlign="center center">
+  <form class="mat-elevation-z3 giveConsentForm"
+        fxLayout="column"
+        fxLayoutGap="15px"
+        [formGroup]="consentForm">
+    <!-- Name Field -->
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name">
+      <mat-error *ngIf="consentForm.get('name').hasError('required')">
+        Name is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Email field -->
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email">
+      <mat-error *ngIf="consentForm.get('email').hasError('email') && !consentForm.get('email').hasError('required')">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="consentForm.get('email').hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <!-- 'Consents Given for' checkboxes -->
+    <div formArrayName="consentsGivenFor"
+         *ngFor="let ctrl of consentForm.get('consentsGivenFor')['controls']; let groupIndex = index;">
+      <div [formGroupName]="groupIndex">
+        <mat-checkbox formControlName="checked">{{ ctrl.value.label }}</mat-checkbox>
+      </div>
+    </div>
+    <mat-error *ngIf="consentForm.get('consentsGivenFor').dirty && consentForm.get('consentsGivenFor').hasError('required')">
+      At least one checkbox <strong>required</strong> to be checked
+    </mat-error>
+
+    <!-- Submit button -->
+    <button mat-raised-button
+            [disabled]="consentForm.invalid"
+            (click)="giveConsent()">
+      Give Consent
+    </button>
+  </form>
+</div>

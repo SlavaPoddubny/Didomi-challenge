@@ -1,0 +1,25 @@
+<mat-sidenav-container autosize class="sidenav-container">
+  <!-- Side navigation content, menu items -->
+  <mat-sidenav mode="side" opened>
+    <h2 class="sidenav-heading">Didomi Challenge</h2>
+    <mat-list role="list" fxLayout="column" fxLayoutGap="12px">
+      <mat-divider></mat-divider>
+      <mat-list-item role="listitem">
+        <a routerLink="/give-consent" routerLinkActive="sidebar-link--active" class="sidebar-link">
+          Give Consent
+        </a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item role="listitem">
+        <a routerLink="/consents" routerLinkActive="sidebar-link--active" class="sidebar-link">
+          Collected Consents
+        </a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+    </mat-list>
+  </mat-sidenav>
+  <!-- Main Content -->
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
