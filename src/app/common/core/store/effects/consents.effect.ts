@@ -76,7 +76,7 @@ export class ConsentsEffect {
           map(() => {
             // load data after remove
             this.store.dispatch(new consentsActions.LoadConsents({
-              pageIndex: 0,
+              pageIndex: action.payload.pageIndex,
               pageSize: action.payload.pageSize
             }));
           }),

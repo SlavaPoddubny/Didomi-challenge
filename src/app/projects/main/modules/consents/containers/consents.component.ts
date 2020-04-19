@@ -76,10 +76,15 @@ export class ConsentsComponent extends Unsubscriber implements OnInit {
 
   /**
    * Remove item from list
+   * there inconsistency between paginator page index and page index needed for api call
    * @param id unique item id
    */
   removeConsent(id: number): void {
-    this.consentsStore.dispatch(new fromConsentsStore.RemoveConsent({ id, pageSize: this.pageSize }));
+    const updatedPageIndex = this.paginator.getNumberOfPages() - 1;
+    this.paginator.pageIndex = this.dataSource.data.length === 1 ? updatedPageIndex - 1 : updatedPageIndex;
+    this.consentsStore.dispatch(new fromConsentsStore.RemoveConsent({
+      id, pageIndex: this.paginator.pageIndex + 1, pageSize: this.pageSize
+    }));
   }
 
   /**

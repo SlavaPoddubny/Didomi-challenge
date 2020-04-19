@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatTableModule } from '@angular/material/table';
+import { MatTableModule, MatTableDataSource } from '@angular/material/table';
 import { MatPaginatorModule, MatPaginator, PageEvent } from '@angular/material/paginator';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -29,7 +29,8 @@ const pageEvent = {
   pageIndex: 1
 } as PageEvent;
 const paginator = {
-  pageIndex: 0
+  pageIndex: 0,
+  getNumberOfPages: () => 1
 };
 
 describe('ConsentsComponent', () => {
@@ -69,6 +70,7 @@ describe('ConsentsComponent', () => {
     component = fixture.componentInstance;
     component.consents$ = of([ConsentReadMock]);
     component.paginator = paginator as MatPaginator;
+    component.dataSource = new MatTableDataSource([ConsentReadMock]);
     consentsStore = TestBed.inject(Store);
   });
 
@@ -143,14 +145,14 @@ describe('ConsentsComponent', () => {
     });
   });
 
-  describe('#removeOffice', () => {
-    it('should dispatch RemoveOffice', () => {
+  describe('#removeConsent', () => {
+    it('should dispatch RemoveConsent', () => {
       storeDispatchSpy = spyOn(consentsStore, 'dispatch');
 
       component.removeConsent(ConsentReadMock.id);
 
       expect(storeDispatchSpy).toHaveBeenCalledWith(
-        new fromConsentsStore.RemoveConsent({ id: ConsentReadMock.id, pageSize })
+        new fromConsentsStore.RemoveConsent({ id: ConsentReadMock.id, pageIndex: pageIndex - 1, pageSize })
       );
     });
   });

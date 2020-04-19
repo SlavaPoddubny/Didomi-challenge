@@ -21,7 +21,7 @@ export class ConsentsServiceMock {
     return of();
   }
 
-  removeOffice(id: number): Observable<any> {
+  removeConsent(id: number): Observable<any> {
     return of();
   }
 }

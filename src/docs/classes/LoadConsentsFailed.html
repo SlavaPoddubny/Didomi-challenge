@@ -267,7 +267,7 @@ export class CreateNewConsent implements Action {
 export class RemoveConsent implements Action {
   readonly type &#x3D; ConsentsActionTypes.RemoveConsent;
 
-  constructor(public payload: { id: number, pageSize: number }) { }
+  constructor(public payload: { id: number, pageIndex: number, pageSize: number }) { }
 }
 
 export type ConsentsActions &#x3D;

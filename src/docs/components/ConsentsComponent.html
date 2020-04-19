@@ -383,8 +383,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="97"
-                            class="link-to-prism">src/app/projects/main/modules/consents/containers/consents.component.ts:97</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="102"
+                            class="link-to-prism">src/app/projects/main/modules/consents/containers/consents.component.ts:102</a></div>
                 </td>
             </tr>
 
@@ -462,8 +462,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="89"
-                            class="link-to-prism">src/app/projects/main/modules/consents/containers/consents.component.ts:89</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="94"
+                            class="link-to-prism">src/app/projects/main/modules/consents/containers/consents.component.ts:94</a></div>
                 </td>
             </tr>
 
@@ -659,15 +659,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="81"
-                            class="link-to-prism">src/app/projects/main/modules/consents/containers/consents.component.ts:81</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="82"
+                            class="link-to-prism">src/app/projects/main/modules/consents/containers/consents.component.ts:82</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Remove item from list</p>
+                    <div class="io-description"><p>Remove item from list
+there inconsistency between paginator page index and page index needed for api call</p>
 </div>
 
                     <div class="io-description">
@@ -1173,10 +1174,15 @@ export class ConsentsComponent extends Unsubscriber implements OnInit {
 
   /**
    * Remove item from list
+   * there inconsistency between paginator page index and page index needed for api call
    * @param id unique item id
    */
   removeConsent(id: number): void {
-    this.consentsStore.dispatch(new fromConsentsStore.RemoveConsent({ id, pageSize: this.pageSize }));
+    const updatedPageIndex &#x3D; this.paginator.getNumberOfPages() - 1;
+    this.paginator.pageIndex &#x3D; this.dataSource.data.length &#x3D;&#x3D;&#x3D; 1 ? updatedPageIndex - 1 : updatedPageIndex;
+    this.consentsStore.dispatch(new fromConsentsStore.RemoveConsent({
+      id, pageIndex: this.paginator.pageIndex + 1, pageSize: this.pageSize
+    }));
   }
 
   /**
