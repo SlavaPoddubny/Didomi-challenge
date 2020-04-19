@@ -29,8 +29,7 @@ const pageEvent = {
   pageIndex: 1
 } as PageEvent;
 const paginator = {
-  pageIndex: 0,
-  getNumberOfPages: () => 1
+  pageIndex: 0
 };
 
 describe('ConsentsComponent', () => {
@@ -70,6 +69,7 @@ describe('ConsentsComponent', () => {
     component = fixture.componentInstance;
     component.consents$ = of([ConsentReadMock]);
     component.paginator = paginator as MatPaginator;
+    component.pageSize = pageSize;
     component.dataSource = new MatTableDataSource([ConsentReadMock]);
     consentsStore = TestBed.inject(Store);
   });
@@ -146,14 +146,12 @@ describe('ConsentsComponent', () => {
   });
 
   describe('#removeConsent', () => {
-    it('should dispatch RemoveConsent', () => {
-      storeDispatchSpy = spyOn(consentsStore, 'dispatch');
+    it('should remove consent with appropriate id', () => {
+      const removeConsent = spyOn(component, 'removeConsent');
 
       component.removeConsent(ConsentReadMock.id);
 
-      expect(storeDispatchSpy).toHaveBeenCalledWith(
-        new fromConsentsStore.RemoveConsent({ id: ConsentReadMock.id, pageIndex: pageIndex - 1, pageSize })
-      );
+      expect(removeConsent).toHaveBeenCalledWith(ConsentReadMock.id);
     });
   });
 });

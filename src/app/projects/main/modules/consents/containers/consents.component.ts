@@ -4,7 +4,7 @@ import { MatPaginator, PageEvent } from '@angular/material/paginator';
 
 import { Store, select } from '@ngrx/store';
 import { takeUntil } from 'rxjs/operators';
-import { range } from 'lodash-es';
+import { range, cloneDeep } from 'lodash-es';
 
 import { Unsubscriber } from '@core/classes/unsubscriber';
 
@@ -76,14 +76,15 @@ export class ConsentsComponent extends Unsubscriber implements OnInit {
 
   /**
    * Remove item from list
-   * there inconsistency between paginator page index and page index needed for api call
    * @param id unique item id
    */
   removeConsent(id: number): void {
-    const updatedPageIndex = this.paginator.getNumberOfPages() - 1;
-    this.paginator.pageIndex = this.dataSource.data.length === 1 ? updatedPageIndex - 1 : updatedPageIndex;
+    // there is inconsistency between paginator page index and page index needed for api call
+    const pageIndex = this.dataSource.data.length === this.pageSize ? cloneDeep(this.paginator.pageIndex + 1) :
+                                                      cloneDeep(this.paginator.pageIndex === 0 ? 1 : this.paginator.pageIndex);
+    this.paginator.pageIndex = this.paginator.pageIndex === pageIndex ? this.paginator.pageIndex - 1 : this.paginator.pageIndex;
     this.consentsStore.dispatch(new fromConsentsStore.RemoveConsent({
-      id, pageIndex: this.paginator.pageIndex + 1, pageSize: this.pageSize
+      id, pageIndex, pageSize: this.pageSize
     }));
   }
 
